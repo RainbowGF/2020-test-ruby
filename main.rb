@@ -1,7 +1,11 @@
 def main 
     puts 'hello, world!'
+    checking_password_storage
 end
 
-if __FILE__ == %0
+def checking_password_storage
+    puts 'its working lol'
+end
+if __FILE__ == $0
     main
 end
