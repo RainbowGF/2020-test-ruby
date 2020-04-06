@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Fleet class
 class Fleet
   attr_reader :cars
 

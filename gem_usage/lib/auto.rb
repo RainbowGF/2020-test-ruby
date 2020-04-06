@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Auto class
 class Auto
   attr_reader :mark
   attr_reader :model
