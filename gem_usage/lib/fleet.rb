@@ -1,6 +1,6 @@
 # frozen_string_literal: true
-
 # Fleet class
+
 class Fleet
   attr_reader :cars
 
@@ -18,6 +18,23 @@ class Fleet
     ruby_objects = JSON.parse(json_data)
     ruby_objects.each do |car|
       add(Auto.new(car['mark'], car['model'], car['year'], car['consumption']))
+    end
+  end
+
+  def int?(str)
+    Integer(str) rescue false
+  end
+
+  def load_from_stream
+    require 'tty-prompt'
+    prompt = TTY::Prompt.new
+    array = prompt.multiline("describe your car:\nmark: model: year: consumption: ")
+    pp array
+    array.each do |string|
+      a = string.split(" ")
+      next if(ar_car.size != 4)
+      next unless (year = integer? ar_car[2]) && (benz = integer?ar_car[3])
+      add(Car.new(ar_car[0], ar_car[1], year, benz))
     end
   end
 
