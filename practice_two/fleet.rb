@@ -17,5 +17,48 @@ class Fleet
 		end
 	end
 
+	def average_consumption 
+        whoal_benz = 0
+        cars.each do |car|
+            whoal_benz += car.benz 
+        end
+        return whoal_benz/cars.size
+    end
+
+    def number_by_brand(brand)
+        whoal_cars_by_brand = 0
+        for car in cars do
+            if(car.mark.downcase == brand.downcase) 
+                whoal_cars_by_brand += 1
+            end
+        end
+        return whoal_cars_by_brand
+    end
+
+    def number_by_model(model)
+        whoal_cars_by_model = 0
+        for car in cars do
+            if(car.model.downcase == model.downcase) 
+                whoal_cars_by_model += 1
+            end
+        end
+        return whoal_cars_by_model
+    end
+
+    def consumption_by_brand(brand)
+        whoal_cars_by_brand = 0
+        whoal_benz =0
+        for car in cars do
+            if(car.mark.downcase == brand.downcase) 
+                whoal_cars_by_brand += 1
+                whoal_benz += car.benz 
+            end
+        end  
+        if(whoal_cars_by_brand <=0)
+             return 0
+        end
+        return whoal_benz/whoal_cars_by_brand
+    end
+
 
 end

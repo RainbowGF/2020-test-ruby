@@ -7,7 +7,6 @@ def main
     fleet = Fleet.new
     fleet.load_from_file("cars-list.json")
     #pp fleet
-    puts fleet.cars[2]
 end
 
 if __FILE__ == $0
