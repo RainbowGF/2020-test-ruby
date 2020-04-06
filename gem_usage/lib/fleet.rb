@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class Fleet
-
   attr_reader :cars
-  
+
   def initialize
     @cars = []
   end
@@ -27,7 +26,7 @@ class Fleet
       whoal_benz += car.benz
     end
     whoal_benz / cars.size
-    end
+  end
 
   def number_by_brand(brand)
     whoal_cars_by_brand = 0
