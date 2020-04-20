@@ -18,7 +18,7 @@ class Reader
         @match_list.push(match)
         match
       end
-      reader.array_to_hash
+      array_to_hash
       @match_list
     end
 
@@ -49,6 +49,6 @@ class Reader
 
     def add (team_one, team_two, score_one, score_two)
       @match_list.push(Match.new(team_one,team_two,score_one,score_two))
-      reader.array_to_hash
+      array_to_hash
     end
 end

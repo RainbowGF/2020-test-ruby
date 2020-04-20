@@ -5,8 +5,8 @@ class Raiting
     path = File.expand_path("../data/2019-ti-group-stage.csv", __dir__)
     reader=Reader.new
     reader.read(path)
-    pp reader.array_to_hash
 
+    pp reader.array_to_hash
     # reader.list_by_name do |team|
     #   pp team
     # end
@@ -23,7 +23,7 @@ class Raiting
     #   pp team
     # end
 
-    reader.add("","Dota2 gaben gaming",2,0)
+    reader.add("LoL","Dota2 gaben gaming",2,0)
     reader.show
 
 
